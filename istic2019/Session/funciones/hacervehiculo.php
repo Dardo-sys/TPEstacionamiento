@@ -21,6 +21,17 @@ $datos= $consulta->fetchAll(PDO::fetch_assoc);
 var_dump($datos[0]['patente']);
 die();
 
+foreach ($datos as $factura) 
+	{
+
+	if($factura["patente"]==$miObjeto->patente)
+		{
+			header("Location:../paginas/patenteexistente.php");
+			exit();
+		}
+	}
+
+
 if(isset($datos[0]["patente"]))
 	{
 		$select="INSERT INTO factura(patente) VALUES 

@@ -49,7 +49,7 @@ body {
 
        <h1 class="h3 mb-3 font-weight-normal">Ingrese la patente</h1>
         <label for="inputEmail" class="sr-only">Patente</label>
-        <input type="text" id="patente"  name="patente"class="form-control" pattern="([A-ZÑ]{3}\d{3}|[A-ZÑ]{2}\d{3}[A-ZÑ{2}])$"placeholder="Formato Admitido: AAA111" required autofocus>
+        <input type="text" id="patente"  name="patente"class="form-control" pattern="([A-ZÑ]{3}\d{3}|[A-ZÑ]{2}\d{3}[A-ZÑ{2}])$"placeholder="Formato Admitido: AAA111 o AA123AA" required autofocus>
         <!--<button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>-->
 <button class="image" type="submit"><img src="http://mobile.terra.com/sc/mx/enelring/_imgwy_/5b22f96384e4e84723ebecd90f18fe55/?i=http%3a%2f%2fcms.mobile.terra.com%2fCMSSiteCreator%2fimagesite%2fenelring%2fbtnAceptar.jpg" width="373" height="60"></button>
 

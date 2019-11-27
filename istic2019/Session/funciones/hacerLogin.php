@@ -36,7 +36,7 @@
 					$_SESSION['usuario']=$usuario["nombre"];
 					$$_SESSION['perfil']=$usuario["perfil"];
 					
-					setcookie("cookie", $_SESSION['usuario']);
+					setcookie("usuario", $_SESSION['usuario']);
 
 					header("Location: ../paginas/login.php?exito=signup");
 					exit();

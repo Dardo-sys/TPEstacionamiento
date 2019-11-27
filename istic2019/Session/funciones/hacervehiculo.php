@@ -2,29 +2,26 @@
 include 'accesoadatos.php';
 
  $miObjeto2 = new stdClass();
-
+ $miObjeto2->patente = $_GET['patente'];
  date_default_timezone_set('America/Argentina/Buenos_Aires');
  $hora=mktime();
+ $hora2=date("d-m-y H:i",$hora);
 
  $miObjeto2->patente = $_GET['patente'];
  $miObjeto2->horaIngreso = $hora;
+ $miObjeto2->horaIngreso2 = $hora2;
 
-$objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
-$select="INSERT INTO registrovehiculo ( patente, horaingreso) VALUES ('$miObjeto2->patente','$miObjeto2->horaIngreso')";
-$consulta =$objetoAccesoDato->RetornarConsulta($select);
+
+$objetoAccesoDato= AccesoDatos::dameUnObjetoAcceso();
+$consulta =$objetoAccesoDato->RetornarConsulta("select patente from registrovehiculo");
 $consulta->execute();
+$datos=$consulta->fetchall(PDO::FETCH_ASSOC);
+//var_dump($datos[0]['nombre']);
+//var_dump($datos);
 
-$consultaSQL="select patente from factura where patente='$miObjeto->patente' ";
-
-$consulta =$objetoAccesoDato->RetornarConsulta($consultaSQL);
-$datos= $consulta->fetchAll(PDO::fetch_assoc);
-var_dump($datos[0]['patente']);
-die();
-
-foreach ($datos as $factura) 
+foreach ($datos as $registrovehiculo) 
 	{
-
-	if($factura["patente"]==$miObjeto->patente)
+		if($registrovehiculo["patente"]==$miObjeto2->patente)
 		{
 			header("Location:../paginas/patenteexistente.php");
 			exit();
@@ -32,11 +29,10 @@ foreach ($datos as $factura)
 	}
 
 
-if(isset($datos[0]["patente"]))
-	{
-		$select="INSERT INTO factura(patente) VALUES 
+$objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
+$select="INSERT INTO registrovehiculo ( patente, horaingreso, horaingreso2) VALUES ('$miObjeto2->patente','$miObjeto2->horaIngreso','$miObjeto2->horaIngreso2')";
+$consulta =$objetoAccesoDato->RetornarConsulta($select);
+$consulta->execute();
 
 header("Location: ../paginas/okregistrovehiculo.php");
- 
- 
 ?>

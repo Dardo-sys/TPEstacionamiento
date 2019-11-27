@@ -22,6 +22,17 @@ session_start();
 
   </head>
 
+    <style>
+body {
+  background-image: url('parking.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: 100% 100%;
+}
+</style>
+
+
+
   <body>
 
     <header>
@@ -33,8 +44,8 @@ session_start();
     <!-- Begin page content -->
     <main role="main" class="container">
          
-      <div align="center"><h1 class="mt-5">ESTACIONAMIENTO Istic2019</h1>
-      <div align="center"><img src="https://www.logolynx.com/images/logolynx/c9/c9989cc7daae338fd7d353c35b9442fa.png" width=300 height=300></div><br>
+      <div style="color:white" align="center"><h1 class="mt-5">ESTACIONAMIENTO Istic2019</h1>
+      <div align="center"><img src="https://www.logolynx.com/images/logolynx/c9/c9989cc7daae338fd7d353c35b9442fa.png" width=250 height=250></div><br>
 
     </main>
       

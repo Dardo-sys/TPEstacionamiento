@@ -1,10 +1,10 @@
 <?php
-
 include 'accesoadatos.php';
-
 $miObjeto = new stdClass();
 $miObjeto->nombre = $_GET['nombre'];
 $miObjeto->contraseña = $_GET['contraseña'];
+
+
 
 
 $objetoAccesoDato= AccesoDatos::dameUnObjetoAcceso();
@@ -34,7 +34,5 @@ if(isset($datos[0]['nombre']))
 }
 
 header("Location: ../paginas/ok.php");
-
-
 	
 ?>

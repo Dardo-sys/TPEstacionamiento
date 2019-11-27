@@ -22,12 +22,22 @@ session_start();
 
   </head>
 
+        <style>
+body {
+  background-image: url('../parking.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: 100% 100%;
+}
+</style>
+
+
       <style>
    
     th 
     {
-      color:black;
-      background-color: yellow;
+      color:white;
+      background-color: DodgerBlue ;
     }
     td {color:black;}
     table,th,td 

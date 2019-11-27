@@ -1,6 +1,6 @@
 
       <!-- Fixed navbar -->
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary "style="font-family:serif;font-size: 18px;font-weight:bold;">
         <a class="navbar-brand" href="#"><?php if(isset($_SESSION['usuario'])){
                                               echo $_SESSION['usuario'];
                                             }
@@ -40,6 +40,9 @@
 
             <li class="nav-item">
               <a class="nav-link" href="/istic2019/Session/paginas/cargarvehiculo.php">Ingresa Vehiculo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/istic2019/Session/paginas/vehiculosenestacionamiento.php">Vehiculos estacionados</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/istic2019/Session/paginas/facturar.php">Factura Vehiculo</a>

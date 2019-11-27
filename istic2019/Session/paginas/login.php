@@ -1,7 +1,6 @@
 <?php
 session_start();
 ?>
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -21,6 +20,16 @@ session_start();
     <link href="../css/floating-labels.css" rel="stylesheet">
 
   </head>
+
+        <style>
+body {
+  background-image: url('../parking.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: 100% 100%;
+}
+</style>
+
 
   <body>
 

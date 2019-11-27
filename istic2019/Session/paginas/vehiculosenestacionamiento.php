@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -21,18 +22,13 @@ session_start();
 
   </head>
 
-        <style>
-body {
+      <style>
+        body {
   background-image: url('../parking.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;  
   background-size: 100% 100%;
-}
-</style>
-
-
-      <style>
-   
+   }
     th 
     {
       color:white;
@@ -43,6 +39,7 @@ body {
     {
      border: 3px solid black;
     text-align: center;
+    font-family:serif;
     }
 
     </style>
@@ -59,48 +56,64 @@ body {
     <main role="main" class="container">
          
     
-     <h3>Lista de usuarios Registrados</h3>
-     <br>
+
 
 
       <table style="width:100%">
 
        <tr>
-            <th>Usuarios</th>
+            <th>Vehiculo</th>
+            <th>Fecha/Hora Ingreso</th>
             
           </tr>
 
 
-      
+<!--<form class="form-signin" action="../funciones/hacerBorradovehiculos.php">-->
 <?php
 
   include '../funciones/accesoadatos.php';
 
-      $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
-      $consulta =$objetoAccesoDato->RetornarConsulta("select nombre  from usuario");
-      $consulta->execute();     
-      $datos= $consulta->fetchAll(PDO::FETCH_ASSOC);
+  $cantidadAutos=0;
+  $totalFacturado = 0;
+  date_default_timezone_set('America/Argentina/Buenos_Aires');
 
 
 
-    
-    foreach ($datos as $usuario)  
+  $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
+  $consulta =$objetoAccesoDato->RetornarConsulta("select id ,patente  , horaingreso2  from registrovehiculo");
+  $consulta->execute();     
+  $datos= $consulta->fetchAll(PDO::FETCH_ASSOC);
+
+    //$archivo = fopen("../archivos/facturados.txt", "r");
+    //while(!feof($archivo)) 
+
+    foreach ($datos as $registrovehiculo)
     {
-      
-        echo "<tr>";
-        echo "<td>".$usuario['nombre']."</td>";   
-        echo "</tr>";
+      //$objeto = json_decode(fgets($archivo));
+      //if ($objeto != "") 
+      //{
+        //echo "<tr>";
+        //echo "<td>".$objeto->Vehiculo."</td>   <td>".$objeto->fechaEntrada."</td>   <td>".$objeto->fechaSalida."</td>   <td>".$objeto->importe."</td>";
+        //echo "</tr>";
+
+      echo "<tr>";
+        echo "<td>".$registrovehiculo['patente']."</td>   <td>".$registrovehiculo['horaingreso2']."</td> <td>".$registrovehiculo['id']."</td>";
+
+      //echo "<input type='submit' name='hacer'  value='".$registrovehiculo['id']."'>borrar</input><br>";
         
 
 
         
+        $cantidadAutos = $cantidadAutos + 1;
+       
       
     }
     echo "</table>";
-
+ 
     
-   
+    //fclose($archivo);
   ?>
+</form>
 
     </main>
       

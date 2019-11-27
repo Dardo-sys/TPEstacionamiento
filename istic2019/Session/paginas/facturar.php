@@ -63,7 +63,7 @@ session_start();
                               
     <h1 class="h3 mb-3 font-weight-normal">Facturar Vehículo</h1>
     <label for="inputEmail" class="sr-only">Patente</label>
-    <input type="text" id="patente"  name="patente"class="form-control" pattern="([A-ZÑ]{3}\d{3}|[A-ZÑ]{2}\d{3}[A-ZÑ{2}])$"placeholder="Formato Admitido: AAA111" required autofocus>
+    <input type="text" id="patente"  name="patente"class="form-control" pattern="([A-ZÑ]{3}\d{3}|[A-ZÑ]{2}\d{3}[A-ZÑ{2}])$"placeholder="Formato Admitido: AAA111 o AA123AA" required autofocus>
                              
     <button class="image" type="submit"><img src="http://www.don-nico.com/images/Boton-Obtener-Factura.png" width="304" height="50"></button>
 

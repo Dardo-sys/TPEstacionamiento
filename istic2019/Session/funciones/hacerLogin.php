@@ -34,7 +34,7 @@
 
 					//fclose($archivo);
 					$_SESSION['usuario']=$usuario["nombre"];
-					$$_SESSION['perfil']=$usuario["perfil"];
+					$$_SESSION['perfil']=$objeto->perfil;
 					
 					setcookie("cookie", $_SESSION['usuario']);
 

@@ -21,7 +21,7 @@
             </li>
               <?php 
             if(isset($_SESSION['usuario'])==false){
-              
+              //solo muestra estos item , si el usuario no esta logeado
             ?>
             <li class="nav-item">
               <a class="nav-link" href="/istic2019/Session/paginas/registro.php">Registrate</a>
@@ -35,25 +35,25 @@
 
             <?php 
             if(isset($_SESSION['usuario'])){
-              
+              //solo muestra el menu si estas con la variable de sesión instaciada
             ?>
 
             <li class="nav-item">
-              <a class="nav-link" href="/istic2019/Session/paginas/cargarvehiculo.php">Ingresa Vehiculo</a>
+              <a class="nav-link" href="/istic2019/Session/paginas/cargarvehiculo.php">IN Vehiculo</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/istic2019/Session/paginas/vehiculosenestacionamiento.php">Vehiculos estacionados</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/istic2019/Session/paginas/facturar.php">Factura Vehiculo</a>
+              <a class="nav-link" href="/istic2019/Session/paginas/facturar.php">OUT Vehiculo</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/istic2019/Session/paginas/listausuarios.php">Lista Usuarios</a>
             <li class="nav-item">
-              <a class="nav-link" href="/istic2019/Session/paginas/facturados.php">Lista Vehiculos</a>
+              <a class="nav-link" href="/istic2019/Session/paginas/facturados.php">Vehiculos Retirados</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/istic2019/Session/funciones/hacerLogout.php">Cerra Sesion</a>
+              <a class="nav-link" href="/istic2019/Session/funciones/hacerLogout.php">Kill Sesion</a>
             </li>
           
             <?php 

@@ -26,4 +26,4 @@ $data .= '<strong>Cobrar:</strong> $' .$cobrar.'<br>';
 $mpdf->WriteHTML($data);
 
 //salida a navegador
-$mpdf->Output('TicketParking.pdf', 'D')
+$mpdf->Output('TicketParking.pdf', 'D');

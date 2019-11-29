@@ -29,6 +29,9 @@ session_start();
     ?>
     </header>
 
+    <!-- Begin page content -->
+    <main role="main" class="container">
+         
 <div class="container">
          
       <form action="makepdf.php" method="post"> 
@@ -42,6 +45,22 @@ session_start();
 
       </form>
     </div>
+        
+    </main>
+      
+     <footer class="footer">
+    <?php
+        include "componentes/pie.php";
+    ?>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" cAlumnorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
   </body>
-  </html>
-  
+</html>

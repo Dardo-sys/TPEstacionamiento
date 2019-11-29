@@ -2,10 +2,10 @@
 require_once __DIR__ . '/vendor/autoload.php';
 
 //variables
-  $patente = $_GET["patente"];
-  $cobrar = $_GET['cobrar'];
-  $ingreso = $_GET['ingreso'];
-  $salida = $_GET['salida'];
+  $patente = $_POST["patente"];
+  $cobrar = $_POST['cobrar'];
+  $ingreso = $_POST['ingreso'];
+  $salida = $_POST['salida'];
 
 //instancia pdf
   $mpdf = new \Mpdf\Mpdf();

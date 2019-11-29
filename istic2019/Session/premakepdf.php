@@ -39,8 +39,8 @@ session_start();
      
             <br>
             <br>
-            <a href="../paginas/facturar.php"><h4>Facturar Otro Vehiculo</h4></a>
-            <a href="../index.php"><h4>Volver al Inicio</h4></a>
+            <a href="../Session/paginas/facturar.php"><h4>Facturar Otro Vehiculo</h4></a>
+            <a href="../Session/index.php"><h4>Volver al Inicio</h4></a>
             <a href="../Session/makepdf.php "><h4>Desgargar PDF</h4></a>
 
       </form>

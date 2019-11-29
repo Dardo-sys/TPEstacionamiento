@@ -41,7 +41,7 @@ session_start();
             <br>
             <a href="../paginas/facturar.php"><h4>Facturar Otro Vehiculo</h4></a>
             <a href="../index.php"><h4>Volver al Inicio</h4></a>
-            <a href="istic2019/Session/makepdf.php "><h4>Desgargar PDF</h4></a>
+            <a href="../Session/makepdf.php "><h4>Desgargar PDF</h4></a>
 
       </form>
     </div>
